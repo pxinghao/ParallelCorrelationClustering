@@ -8,17 +8,17 @@ Data for the examples are provided in the <a href=data/>data</a> directory, sour
 
 
 To run Example,
-<pre>java -cp bin/submodmax.jar Example inputfile=&lt;filename&gt; maxNThreads=&lt;maximum number of threads&gt;</pre>
+<pre>java -cp bin/parrCorrClus.jar Example inputfile=&lt;filename&gt; maxNThreads=&lt;maximum number of threads&gt;</pre>
 For example,
-<pre>java -cp bin/submodmax.jar Examples inputfile=data/eswiki-2013_rand_symm maxNThreads=4</pre>
+<pre>java -cp bin/parrCorrClus.jar Examples inputfile=data/eswiki-2013_rand_symm maxNThreads=4</pre>
 The default options runs serial KwikCluster (using 1 thread), C4 and ClusterWild! (BSP and asynchronous versions, using 1 to maxNThreads threads), and the CDK algorithm (using maxNThreads).
 For more options, see the documentation on <a href=api_doc/index.html#Example$>Example.scala</a>
 
 <H3>Preprocessing graph data for examples</H3>
 Graph data downloaded from <a href="http://law.di.unimi.it/datasets.php">Laboratory for Web Algorithms</a> can be pre-processed (randomizing order and symmetrizing graph) for use by running <a href=src/main/scala/Preprocess.scala>Preprocess.scala</a> with the command line argument
-<pre>java -cp bin/submodmax.jar PreprocessGraph inputfile=&lt;filename&gt;</pre>
+<pre>java -cp bin/parrCorrClus.jar PreprocessGraph inputfile=&lt;filename&gt;</pre>
 For example,
-<pre>java -cp bin/submodmax.jar PreprocessGraph inputfile=data/eswiki-2013</pre>
+<pre>java -cp bin/parrCorrClus.jar PreprocessGraph inputfile=data/eswiki-2013</pre>
 
 
 <H3>Running examples using SBT</H3>
