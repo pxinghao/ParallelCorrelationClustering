@@ -1,6 +1,17 @@
 #Parallel Correlation Clustering
 
 This repository contains the code for the parallel algorithms presented in our <a href="paper/pan-etal.nips2015corrclus1.pdf">NIPS 2015 paper</a> for parallel correlation clustering.
+We take a database-transactional view of the serial KwikCluster algorithm which provides an expected objective value of 3 OPT.
+Each set of operations on a vertex is treated as a transaction to be executed in parallel with other transactions.
+
+Our first algorithm, C4 (correlation clustering using concurrency control), resolves conflicts between transactions, but either forcing later transactions to wait, or correcting the clustering assignment of the later conflicting transaction.
+As a result, we guarantee serial equivalence with KwikCluster, and specifically maintains the 3 OPT approximation.
+
+The second algorithm, ClusterWild!, ignores potential conflicts between transactions and simply executes them in parallel.
+Despite the conflicts, we are able to analytically show that ClusterWild! (BSP) obtains a reasonable error.
+In practice, the objective value of ClusterWild! (BSP) is almost the same as that of KwikCluster.
+
+Our code implements the BSP and asynchronous versions of C4 and ClusterWild!, in addition to the serial KwikCluster algorithm and a distributed algorithm (CDK) described in this <a href="http://dl.acm.org/citation.cfm?id=2623743&dl=ACM&coll=DL&CFID=540027751&CFTOKEN=13236671">paper</a>.
 
 ##Running examples without compilation
 As a demonstration, <a href=src/main/scala/Example.scala>Example.scala</a> runs the various correlation clustering algorithms.
