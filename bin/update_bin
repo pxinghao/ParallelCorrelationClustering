@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+sbt/sbt assembly
+cp target/scala-2.11/ParallelCorrelationClustering-assembly-1.0.jar bin/parrCorrClus.jar
+
+
