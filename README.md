@@ -32,7 +32,7 @@ For example,
 <pre>java -cp bin/parrCorrClus.jar PreprocessGraph inputfile=data/eswiki-2013</pre>
 
 
-<H3>Running examples using SBT</H3>
+##Running examples using SBT
 
 If you want to modify the code and run the examples again you can either recompile using bin/update_bin or using the sbt launch scripts as below:
 
